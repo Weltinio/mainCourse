@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="./Assets/Style.css" rel="stylesheet">
+        <title>
+            Avion Survey
+        </title>
+    </head>
+
+<body>
+      <header id="title">
+            <h1> Avion School Survey</h1>
+      </header>
+
+    <p id="description">
+        <h2>Thank you for your interest! Please fill out this form: </h2>
+    </p>
+    <div class="formstyle">
+        <form id="survey-form">
+        <div id="div-name">
+            <label for="name" id="name-label"> Full Name:</label>
+            <input id="name" type="text" name="name" placeholder="Enter name here!" required>
+        </div>
+        
+        <div id="div-email">
+            <label for="email" id="email-label"> Email Address: </label>
+            <input id="email" type="email" name="email" placeholder="Please write your email address" required>
+        </div>
+        <div id="div-number">
+        <label for="number" id="number-label"> Mobile Number: </label>
+            <input id="number" type="number" name="number" minlength="8" maxlength="11" placeholder="Telephone number here!" required>
+        </div>
+        <div id="div-drop">
+        <label for="dropdown"> What schedule would you prefer? </label>
+            <select id="dropdown">
+                <option> -- Select from the options --</option>
+                <option> Morning Class </option>
+                <option> Evening Class </option>
+                <option> Weekend Class </option>
+            </select>
+        </div>
+        <div id="div-radio">
+            <label for="u13">Where did you learn about Avion School?</label>
+            <fieldset id="u13">
+                <input type="radio" id="ads" name="radio">
+                    <label for="ads"> Facebook ads </label>
+                <input type="radio" id="friends" name="radio">
+                    <label for="friends"> Friends and Family</label>
+                <input type="radio" id="magazine" name="radio">
+                    <label for="magazine"> Magazines </label>
+            </fieldset>
+        </div>
+        <div id="div-checkbox"> What courses would you be interested in taking?
+            <div><label for="front-end"> Front-end Programming </label>
+                <input type="checkbox" id="front-end">
+            </div>
+            <div>
+            <label for="back-end"> Back-end Programming </label>
+                <input type="checkbox" id="back-end">
+                </div>
+            <div>
+            <label for="game-dev"> Game Development </label>
+                <input type="checkbox" id="game-dev">
+            </div>
+        </div>
+        <div id="div-textbox">
+            Are there any other courses you might be interested in?
+            <textarea id="othercourse" rows="5" cols="100">Please write your suggestions here.
+            </textarea>
+        </div>
+        <div id="submit">
+            <input type="submit">
+        </div>
+
+    </form>
+    </div>
+</body>
+
+</html>
