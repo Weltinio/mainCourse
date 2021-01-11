@@ -1,3 +1,4 @@
+{
 let display = document.querySelector('.game-status')
 let isGamePlaying = true
 let currentPlayer = "X";
@@ -26,7 +27,7 @@ function restartGame() {
     gameState = ["", "", "", "", "", "", "", "", ""];
     display.innerHTML = currentPlayerTurn();
     document.querySelectorAll('.cell')
-               .forEach(cell => cell.innerHTML = "");
+    .forEach(cell => cell.innerHTML = "");
 }
 
 function swapPlayer() {
@@ -39,7 +40,7 @@ let cellClick = (clickedCellEvent) => {
     const clickedCellIndex = parseInt(clickedCell.getAttribute('data-cell-index'))
    
     if(gameState[clickedCellIndex] !== '' || !isGamePlaying) {
-        return;
+        return alert('Cell is Occupied!');
     };
     
     cellPlayed(clickedCell, clickedCellIndex);
@@ -85,3 +86,4 @@ display.innerHTML = currentPlayerTurn();
 // Event Listeners
 document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', cellClick));
 document.querySelector('.restart-btn').addEventListener('click', restartGame);
+};

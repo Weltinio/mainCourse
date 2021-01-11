@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
   
+body {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .8);
+}
 
 ul {
     margin: 0;
@@ -12,17 +18,18 @@ ul li {
     cursor: pointer;
     position: relative;
     padding: 12px 8px 12px 40px;
-    background: #eee;
+    background: #7E5438;
     font-size: 18px;
     transition: 0.2s;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    list-style-type: none;
 }
   
 ul li:nth-child(odd) {
-    background: #f9f9f9;
+    background: #808080;
 }
   
 
@@ -32,7 +39,7 @@ ul li:hover {
   
 
 ul li.checked {
-    background: #888;
+    background: black;
     color: #fff;
     text-decoration: line-through;
 }
@@ -69,7 +76,7 @@ ul li.checked::before {
     background-image: url('./Assets/pots.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 46%;
+    background-position: 50% 30%;
     padding: 60px 70px;
     color: white;
     text-align: center;
@@ -96,8 +103,8 @@ input {
 .submit-btn {
     padding: 10px;
     width: 25%;
-    background: #d9d9d9;
-    color: #555;
+    background: #7E5438;
+    color: #fff;
     float: left;
     text-align: center;
     font-size: 16px;

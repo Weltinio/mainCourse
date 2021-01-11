@@ -11,50 +11,69 @@ let hello = document.querySelector('#sH')
 let goodBye = document.querySelector('#sG')
 
 
-let sayHello = () => {
-    if(input.value == '') {
-        display.textContent = 'Input field is empty!'
+let sayHello = (name) => {
+    var name = input.value
+
+    if(display.textContent == '' && input.value == '') {
+        display.textContent = 'Choose a name or input your own.'
+    }
+    else if (display.textContent !== ''){
+    display.textContent = `Hello, ${display.textContent}`
     }
     else {
-    display.textContent = 'Hello, ' + input.value
+        display.textContent = name
+    }
+}
+
+let sayGoodBye = (name) => {
+    var name = input.value
+
+    if(display.textContent == '' && input.value == '') {
+        display.textContent = 'Choose a name or input your own.'
+    }
+    else if (display.textContent !== ''){
+    display.textContent = 'Goodbye, ' + display.textContent
+    }
+    else {
+        display.textContent = name
     }
 }
 
 nameBtn1.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn1.textContent
+    display.textContent = nameBtn1.textContent
 })
 
 nameBtn2.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn2.textContent
+    display.textContent = nameBtn2.textContent
 })
 
 nameBtn3.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn3.textContent
+    display.textContent = nameBtn3.textContent
 })
 
 nameBtn4.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn4.textContent
+    display.textContent = nameBtn4.textContent
 })
 
 nameBtn5.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn5.textContent
+    display.textContent = nameBtn5.textContent
 })
 
 nameBtn6.addEventListener('click', () => {
-    display.textContent = 'Hello, ' + nameBtn6.textContent
+    display.textContent = nameBtn6.textContent
 })
 
 submit.addEventListener('click', () => {
-    sayHello()
+    display.textContent = input.value
 })
 
 hello.addEventListener('click', () => {
-    sayHello()
+    sayHello(display.textContent)
 })
 
 goodBye.addEventListener('click', () => {
     if (goodBye.textContent == 'sG') {
-        sayHello()
+        sayGoodBye()
         goodBye.textContent = 'clear'}
     else {
         display.textContent = ''

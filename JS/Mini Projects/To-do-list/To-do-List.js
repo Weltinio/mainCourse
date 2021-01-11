@@ -37,7 +37,7 @@ let newElement = () => {
       var div = this.parentElement;
       div.style.display = "none";
       }
-}
+  }
 }
 
 // Add a "checked" symbol when clicking on a list item
